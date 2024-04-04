@@ -1,5 +1,8 @@
 package com.example.springcore;
 
+import com.example.ioc.Airtel;
+import com.example.ioc.Sim;
+import com.example.ioc.Vodafone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +11,7 @@ public class SpringCoreApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringCoreApplication.class, args);
-        System.out.println("Hello World");
+        Sim sim = new Airtel();
+        sim.calling();
     }
 }
