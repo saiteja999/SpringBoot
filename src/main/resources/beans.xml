@@ -3,15 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id ="airtel" class ="com.example.ioc.Airtel"/>
-    <bean id ="student" class ="com.example.di.Student">
+    <bean id ="airtel" class ="com.practice.ioc.Airtel"/>
+    <bean id ="student" class ="com.practice.di.Student">
         <constructor-arg name="studentName" value="Sai" type="java.lang.String"/>
         <constructor-arg name="id" value= "1" type="int"/>
     </bean>
 
-    <bean id ="exam" class ="com.example.di.Exam">
+    <bean id ="exam" class ="com.practice.di.Exam">
         <constructor-arg name = "invigilator">
-            <bean class ="com.example.di.Invigilator">
+            <bean class ="com.practice.di.Invigilator">
                 <constructor-arg name="id" value="1" type = "int"/>
                 <constructor-arg name ="name" value="Invig1" type="java.lang.String"/>
             </bean>

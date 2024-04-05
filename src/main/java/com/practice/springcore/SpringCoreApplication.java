@@ -1,8 +1,7 @@
-package com.example.springcore;
+package com.practice.springcore;
 
 
-import com.example.di.Exam;
-import com.example.di.Student;
+import com.practice.di.Exam;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

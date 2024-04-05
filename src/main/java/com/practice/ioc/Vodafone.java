@@ -1,4 +1,4 @@
-package com.example.ioc;
+package com.practice.ioc;
 
 public class Vodafone implements Sim{
     @Override

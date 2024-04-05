@@ -1,4 +1,4 @@
-package com.example.di;
+package com.practice.di;
 
 public class Exam {
     private Student student;

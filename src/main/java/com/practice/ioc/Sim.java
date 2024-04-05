@@ -1,4 +1,4 @@
-package com.example.ioc;
+package com.practice.ioc;
 
 public interface Sim {
     void data();

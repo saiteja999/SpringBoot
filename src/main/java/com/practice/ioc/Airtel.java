@@ -1,4 +1,4 @@
-package com.example.ioc;
+package com.practice.ioc;
 
 public class Airtel implements Sim{
     public Airtel(){

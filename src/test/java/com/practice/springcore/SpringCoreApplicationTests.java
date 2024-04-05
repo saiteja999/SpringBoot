@@ -1,4 +1,4 @@
-package com.example.springcore;
+package com.practice.springcore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
