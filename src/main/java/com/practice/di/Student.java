@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Student {
-    @Value("Sai")
+    @Value("${student.name}")
     private String studentName;
 
-    @Value("1")
+    @Value("${student.id}")
     private int id;
 
     public Student(){

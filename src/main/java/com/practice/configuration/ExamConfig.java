@@ -6,9 +6,11 @@ import com.practice.di.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan(basePackages = "com.practice.di")
+@PropertySource("classpath:student-info.properties")
 public class ExamConfig {
 
 //    @Bean(name = "invigilator")

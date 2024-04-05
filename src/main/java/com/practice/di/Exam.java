@@ -5,13 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component("examBean")
 public class Exam {
-
-    @Autowired
     private Student student;
-
-    @Autowired
     private Invigilator invigilator;
 
+    @Autowired
     public void setStudent(Student student) {
         this.student = student;
     }
@@ -22,6 +19,7 @@ public class Exam {
         this.student = student;
     }
 
+    @Autowired
     public void setInvigilator(Invigilator invigilator) {
         this.invigilator = invigilator;
     }
