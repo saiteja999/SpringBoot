@@ -17,6 +17,6 @@ public class SpringCoreApplication {
         System.out.println("config loaded");
 
         Student s = context.getBean("student",Student.class);
-        System.out.println(s.getStudentName());
+        s.displayStudentInfo();
     }
 }
