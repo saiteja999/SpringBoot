@@ -1,9 +1,14 @@
 package com.practice.di;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Invigilator {
+    @Value("1")
     private int id;
+
+    @Value("Invig1")
     private String name;
 
     public Invigilator(){}

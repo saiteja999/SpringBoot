@@ -11,25 +11,25 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.practice.di")
 public class ExamConfig {
 
-    @Bean(name = "invigilator")
-    public Invigilator invigilatorBean(){
-        Invigilator invigilator = new Invigilator();
-        invigilator.setId(2);
-        invigilator.setName("invig1");
-        return invigilator;
-    }
-
-    @Bean(name = {"student","otherStudent"})
-    public Student studentBean(){
-        return new Student("Sai",1);
-    }
-    @Bean(name = "exam")
-    public Exam examBean(){
-        Exam e = new Exam();
-        e.setInvigilator(invigilatorBean());
-        e.setStudent(studentBean());
-
-        return e;
-    }
+//    @Bean(name = "invigilator")
+//    public Invigilator invigilatorBean(){
+//        Invigilator invigilator = new Invigilator();
+//        invigilator.setId(2);
+//        invigilator.setName("invig1");
+//        return invigilator;
+//    }
+//
+//    @Bean(name = {"student","otherStudent"})
+//    public Student studentBean(){
+//        return new Student("Sai",1);
+//    }
+//    @Bean(name = "exam")
+//    public Exam examBean(){
+//        Exam e = new Exam();
+//        e.setInvigilator(invigilatorBean());
+//        e.setStudent(studentBean());
+//
+//        return e;
+//    }
 
 }
