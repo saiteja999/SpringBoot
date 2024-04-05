@@ -2,6 +2,7 @@ package com.practice.springcore;
 
 
 import com.practice.di.Exam;
+import com.practice.di.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,7 +17,7 @@ public class SpringCoreApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         System.out.println("config loaded");
 
-        Exam e = context.getBean("exam",Exam.class);
-        e.displayExamInfo();
+        Student s = context.getBean("studentBean", Student.class);
+        s.displayStudentInfo();
     }
 }
