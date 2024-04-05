@@ -6,10 +6,17 @@
     <bean id ="airtel" class ="com.practice.ioc.Airtel"/>
     <bean id ="student" class ="com.practice.di.Student">
         <constructor-arg name="studentName" value="Sai" type="java.lang.String"/>
-        <constructor-arg name="id" value= "1" type="int"/>
+        <constructor-arg name="id" value= "2" type="int"/>
     </bean>
 
-    <bean id ="exam" class ="com.practice.di.Exam" autowire="constructor">
+    <bean id ="exam" class ="com.practice.di.Exam" autowire="byName">
+        <property name="invigilator">
+            <bean class="com.practice.di.Invigilator">
+                <constructor-arg name = "name" value="Sai"/>
+                <constructor-arg name ="id" value = "1"/>
+            </bean>
+        </property>
 
     </bean>
+
 </beans>
