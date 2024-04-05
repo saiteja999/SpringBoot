@@ -9,14 +9,7 @@
         <constructor-arg name="id" value= "1" type="int"/>
     </bean>
 
-    <bean id ="exam" class ="com.practice.di.Exam">
-        <constructor-arg name = "invigilator">
-            <bean class ="com.practice.di.Invigilator">
-                <constructor-arg name="id" value="1" type = "int"/>
-                <constructor-arg name ="name" value="Invig1" type="java.lang.String"/>
-            </bean>
-        </constructor-arg>
-        <constructor-arg name = "student" ref ="student"/>
-    </bean>
+    <bean id ="exam" class ="com.practice.di.Exam" autowire="constructor">
 
+    </bean>
 </beans>
