@@ -3,18 +3,19 @@ package com.practice.di;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Invigilator {
+    @Value("1")
     private int id;
+    @Value("nameValue")
     private String name;
 
     public Invigilator(){}
 
-    @Value("1")
     public void setId(int id) {
         System.out.println("setter of id");
         this.id = id;
     }
 
-    @Value("nameValue")
+
     public void setName(String name) {
         System.out.println("setter of name");
         this.name = name;
