@@ -10,11 +10,13 @@ public class Invigilator {
 
     @Value("1")
     public void setId(int id) {
+        System.out.println("setter of id");
         this.id = id;
     }
 
     @Value("nameValue")
     public void setName(String name) {
+        System.out.println("setter of name");
         this.name = name;
     }
     public Invigilator(int id, String name)
