@@ -8,4 +8,15 @@
         <constructor-arg name="studentName" value="Sai" type="java.lang.String"/>
         <constructor-arg name="id" value= "1" type="int"/>
     </bean>
+
+    <bean id ="exam" class ="com.example.di.Exam">
+        <constructor-arg name = "invigilator">
+            <bean class ="com.example.di.Invigilator">
+                <constructor-arg name="id" value="1" type = "int"/>
+                <constructor-arg name ="name" value="Invig1" type="java.lang.String"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name = "student" ref ="student"/>
+    </bean>
+
 </beans>
