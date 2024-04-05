@@ -9,8 +9,7 @@ public class Exam {
 //    public void setStudent(Student student) {
 //        this.student = student;
 //    }
-
-    public Exam(){}
+    
 
     @Autowired
     public Exam(Student student){

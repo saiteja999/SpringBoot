@@ -6,6 +6,8 @@
 
     <context:annotation-config></context:annotation-config>
 
+    <context:property-placeholder location="classpath:student-info.properties"/>
+
     <bean id ="airtel" class ="com.practice.ioc.Airtel"/>
     <bean id ="studentObj123" class ="com.practice.di.Student">
         <constructor-arg name="studentName" value="Sai" type="java.lang.String"/>
@@ -15,8 +17,8 @@
     <bean id ="exam" class ="com.practice.di.Exam">
         <property name="invigilator">
             <bean class="com.practice.di.Invigilator">
-                <constructor-arg name = "name" value="Sai"/>
-                <constructor-arg name ="id" value = "1"/>
+                <constructor-arg name = "name" value="${student.name}"/>
+                <constructor-arg name ="id" value = "${student.id}"/>
             </bean>
         </property>
 
