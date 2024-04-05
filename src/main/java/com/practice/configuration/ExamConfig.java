@@ -1,5 +1,7 @@
 package com.practice.configuration;
 
+import com.practice.di.Exam;
+import com.practice.di.Invigilator;
 import com.practice.di.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,10 +11,25 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.practice.di")
 public class ExamConfig {
 
-    @Bean
+    @Bean(name = "invigilator")
+    public Invigilator invigilatorBean(){
+        Invigilator invigilator = new Invigilator();
+        invigilator.setId(2);
+        invigilator.setName("invig1");
+        return invigilator;
+    }
+
+    @Bean(name = {"student","otherStudent"})
     public Student studentBean(){
-        Student student = new Student("Sai",1);
-        return student;
+        return new Student("Sai",1);
+    }
+    @Bean(name = "exam")
+    public Exam examBean(){
+        Exam e = new Exam();
+        e.setInvigilator(invigilatorBean());
+        e.setStudent(studentBean());
+
+        return e;
     }
 
 }

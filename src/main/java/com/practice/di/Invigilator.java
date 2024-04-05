@@ -3,9 +3,7 @@ package com.practice.di;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Invigilator {
-    @Value("1")
     private int id;
-    @Value("nameValue")
     private String name;
 
     public Invigilator(){}

@@ -19,7 +19,9 @@ public class SpringCoreApplication {
         ApplicationContext context = new AnnotationConfigApplicationContext(ExamConfig.class);
         System.out.println("config loaded");
 
-        Student s = context.getBean("studentBean", Student.class);
-        s.displayStudentInfo();
+        Exam e = context.getBean("exam", Exam.class);
+        e.displayExamInfo();
+
+        ((AnnotationConfigApplicationContext)context).close();
     }
 }

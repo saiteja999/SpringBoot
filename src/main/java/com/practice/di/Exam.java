@@ -11,9 +11,9 @@ public class Exam {
     public void setStudent(Student student) {
         this.student = student;
     }
-    
 
-    @Autowired
+    public Exam(){}
+
     public Exam(Student student){
         this.student = student;
     }
